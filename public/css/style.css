@@ -52,7 +52,7 @@ input{
     border-radius: 30px;
     text-align: center;
     width: 80%;
-    color: white;
+    color: black;
     margin: 1em;
     line-height: 2.5em;
 }
@@ -78,4 +78,82 @@ input{
         height: 5em;
         margin: 2em;
     }
+}
+
+.base-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+
+}
+
+.recipes{
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+}
+
+nav{
+    width: 25vw;
+    height: 100%;
+    background: linear-gradient(180deg, #B0A8B9 0%, #59545F 100%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+ul{
+    list-style-type: none;
+}
+
+main{
+    width: 75vw;
+    background: #1E1E1E;
+}
+
+a{
+    text-decoration: none;
+    /* color: white; */
+
+    display: inline-block;
+}
+
+div i{
+    font-size: 2em;
+}
+
+.button{
+    display: flex;
+    background: #00A194;
+    box-shadow: 4em 2em 4em rgba(0, 0, 0, 0.25);
+    border-radius: 3em;
+    text-align: center;
+    padding: 0.5em;
+    color: white;
+    font-family: 'Inder';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.button-icons{
+    color: white;
+    display: flex;
+    float: right;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    padding: 1em 2em;
+    /* justify-content: space-between; */
+
+    background: linear-gradient(90deg, #8659CF 0%, #00C3A2 99.98%, rgba(217, 217, 217, 0) 99.99%);
+}
+
+header>img{
+    height: 90%;
 }
