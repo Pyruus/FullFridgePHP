@@ -18,6 +18,13 @@ body{
     text-align: center;
 }
 
+.form-header{
+    font-family: 'Inder';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 5vh;
+}
+
 .login-container{
     width: 25%;
     
@@ -33,6 +40,28 @@ form.login{
     
     background: #FFFFFF;
     border-radius: 30px;
+}
+
+.register-container{
+    width: 25%;
+    
+}
+
+form.register{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 60vh;
+    
+    background: #FFFFFF;
+    border-radius: 30px;
+}
+
+.lr-swap{
+    font-size: 1.5vh;
+    margin-top: 0.5vh;
 }
 
 button{
@@ -67,6 +96,10 @@ input{
     }
 
     .login-container, .logo{
+        width: 100%;
+    }
+
+    .register-container, .logo{
         width: 100%;
     }
 
