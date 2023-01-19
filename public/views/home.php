@@ -10,13 +10,13 @@
             <div class = 'nav-buttons'>
                 <img src="public/img/logo-no-text.svg">
                 <div class="home-button">
-                    <a href="home.html" class="button">Home</a>
+                    <a href="home" class="button">Home</a>
                 </div>
                 <div class="find-recipe-button">
-                    <a href="find-recipe.html" class="button">Find a recipe</a>
+                    <a href="find_recipe" class="button">Find a recipe</a>
                 </div>
                 <div class="add-recipe-button">
-                    <a href="add-recipe.html" class="button">Add a recipe</a>
+                    <a href="add_recipe" class="button">Add a recipe</a>
                 </div>
             </div>
             <div class="user-buttons">      
@@ -31,12 +31,26 @@
                 </div>
             </div>
         </header>
-        <section class="recipe">
+        <section class="recipes">
             <main>
-
+                <div>Recipe 1</div>
+                <div>Recipe 2</div>
+                <div>Recipe 3</div>
             </main>
             <nav>
-
+                <div class="search-bar">
+                    <form>
+                        <input placeholder="Search recipe">
+                    </form>
+                </div>
+                <div class="categories">
+                    <h2>Categories</h2>
+                    <ul>
+                        <li>Category 1</li>
+                        <li>Category 2</li>
+                        <li>Category 3</li>
+                    </ul>
+                </div>
             </nav>
         </section>
     </div>
