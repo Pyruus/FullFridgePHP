@@ -33,9 +33,11 @@
         </header>
         <section class="recipes">
             <main>
-                <div>Recipe 1</div>
-                <div>Recipe 2</div>
-                <div>Recipe 3</div>
+                <div>
+                    <img src="public/uploads/<?= $recipe->getImage() ?>">
+                    <h2><?= $recipe->getTitle() ?></h2>
+                    <p><?= $recipe->getDescription() ?></p>
+                </div>
             </main>
             <nav>
                 <div class="search-bar">

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/recipes.css">
     <script src="https://kit.fontawesome.com/f8f883ef8f.js" crossorigin="anonymous"></script>
     <title>Full Fridgee</title>
 </head>
@@ -31,9 +32,22 @@
                 </div>
             </div>
         </header>
-        <section class="recipe">
-            <main>
+        <section class="recipes">
+            <main class="recipe-form">
+                <h1>Dodaj przepis</h1>
+                <form action="addRecipe" method="post" ENCTYPE="multipart/form-data">
+                    <?php if(isset($messages)){
+                        foreach ($messages as $message){
+                            echo $message;
+                        }
+                    }
+                    ?>
+                    <input name="name" type="text" placeholder="Name">
+                    <textarea name="description" rows="8" placeholder="Put a recipe here"></textarea>
 
+                    <input type="file" name="file">
+                    <button type="submit">Add</button>
+                </form>
             </main>
             <nav>
                 

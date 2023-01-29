@@ -12,5 +12,6 @@ Routing::get('add_recipe', 'DefaultController');
 Routing::get('find_recipe', 'DefaultController');
 
 Routing::post('login', 'SecurityController');
+Routing::post('addRecipe', 'RecipeController');
 
 Routing::run($path);
