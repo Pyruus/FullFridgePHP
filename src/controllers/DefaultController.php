@@ -8,12 +8,6 @@ class DefaultController extends AppController{
         $this->render('login');
     }
 
-    public function home(){
-        //TODO
-        
-        $this->render('home');
-    }
-
     public function add_recipe(){
         //TODO
 

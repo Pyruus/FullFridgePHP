@@ -20,7 +20,7 @@
                     ?>
                 </div>
                 <div class="form-header">Sign up</div>
-                <div class="lr-swap">Already have an account? <a href="index" class="lr-swap">Sign in</a></div>
+                <div class="lr-swap">Already have an account? <a href="login" class="lr-swap">Sign in</a></div>
                 <input name="email" type="text" placeholder="email@email.com">
                 <input name="confirm-email" type="text" placeholder="Confirm email">
                 <input name="password" type="password" placeholder="Password">

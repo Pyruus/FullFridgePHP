@@ -51,7 +51,10 @@ class SecurityController extends AppController
         $confirmedPassword = $_POST['confirm-password'];
 
         if ($password !== $confirmedPassword) {
-            return $this->render('register', ['messages' => ['Please provide proper password'.$password.' '.$confirmedPassword]]);
+            return $this->render('register', ['messages' => ['Please provide proper password']]);
+        }
+        if ($email !== $confirmedEmail) {
+            return $this->render('register', ['messages' => ['Please provide proper email']]);
         }
 
         //TODO try to use better hash function

@@ -33,11 +33,13 @@
         </header>
         <section class="recipes">
             <main>
+                <?php foreach ($recipes as $recipe): ?>
                 <div>
                     <img src="public/uploads/<?= $recipe->getImage() ?>">
                     <h2><?= $recipe->getTitle() ?></h2>
                     <p><?= $recipe->getDescription() ?></p>
                 </div>
+                <?php endforeach; ?>
             </main>
             <nav>
                 <div class="search-bar">
