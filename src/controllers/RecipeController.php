@@ -2,6 +2,7 @@
 
 require_once 'AppController.php';
 require_once __DIR__.'/../models/Recipe.php';
+require_once __DIR__.'/../repository/RecipeRepository.php';
 class RecipeController extends AppController
 {
     const MAX_FILE_SIZE = 1024*1024;
@@ -9,6 +10,14 @@ class RecipeController extends AppController
     const UPLOAD_DIRECTORY = '/../public/uploads/';
 
     private $messages = [];
+    protected $recipeRepostiory;
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->recipeRepostiory = new RecipeRepository();
+    }
+
     public function addRecipe(){
         if($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])){
             move_uploaded_file(
@@ -18,6 +27,7 @@ class RecipeController extends AppController
 
             $recipe = new Recipe($_POST['name'], $_POST['description'], $_FILES['file']['name']);
 
+            $this->recipeRepostiory->addRecipe($recipe);
             return $this->render('home', ['messages' => $this->messages, 'recipe' => $recipe]);
         }
 
