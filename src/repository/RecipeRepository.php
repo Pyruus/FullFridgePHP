@@ -65,4 +65,17 @@ class RecipeRepository extends Repository
         return $result;
 
     }
+
+    public function getRecipeByTitle(string $searchedTitle){
+        $searchedTitle = '%'.strtolower($searchedTitle).'%';
+
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM recipes WHERE LOWER(title) LIKE :search
+        ');
+
+        $stmt->bindParam(':search', $searchedTitle, PDO::PARAM_STR);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <script src="https://kit.fontawesome.com/f8f883ef8f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./public/js/search.js" defer></script>
     <title>Full Fridgee</title>
 </head>
 <body>
@@ -32,7 +33,7 @@
             </div>
         </header>
         <section class="recipes">
-            <main>
+            <main class="recipes-list">
                 <?php foreach ($recipes as $recipe): ?>
                 <div>
                     <img src="public/uploads/<?= $recipe->getImage() ?>">
@@ -43,9 +44,7 @@
             </main>
             <nav>
                 <div class="search-bar">
-                    <form>
-                        <input placeholder="Search recipe">
-                    </form>
+                    <input placeholder="Search recipe" id ="search-bar">
                 </div>
                 <div class="categories">
                     <h2>Categories</h2>
@@ -59,3 +58,11 @@
         </section>
     </div>
 </body>
+
+<template id="recipes-template">
+    <div>
+        <img src="">
+        <h2></h2>
+        <p></p>
+    </div>
+</template>
