@@ -66,8 +66,9 @@ class SecurityController extends AppController
     }
 
     public function logout(){
+        if(!$this->isPost()){
+            return $this->render('home');
+        }
         setcookie("user_id", "", time() - 3600);
-
-        $this->render('login');
     }
 }
