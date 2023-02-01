@@ -10,6 +10,7 @@ Routing::get('home', 'RecipeController');
 Routing::get('register', 'DefaultController');
 Routing::get('add_recipe', 'DefaultController');
 Routing::get('find_recipe', 'DefaultController');
+Routing::get('logout', 'SecurityController');
 
 Routing::post('login', 'SecurityController');
 Routing::post('addRecipe', 'RecipeController');

@@ -20,6 +20,8 @@ class UserRepository extends Repository
             return null;
         }
 
+        setcookie('user_id', $user['id']);
+
         return new User(
             $user['user_email'],
             $user['user_password']

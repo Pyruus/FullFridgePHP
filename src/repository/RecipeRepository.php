@@ -34,12 +34,12 @@ class RecipeRepository extends Repository
             VALUES (?, ?, ?, ?, ?)
         ');
 
-        $createdBy = 1;
+
         $stmt->execute([
             $recipe->getTitle(),
             $recipe->getDescription(),
             $date->format('Y-m-d'),
-            $createdBy,
+            $_COOKIE['user_id'],
             $recipe->getImage()
         ]);
     }

@@ -64,4 +64,10 @@ class SecurityController extends AppController
 
         return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
     }
+
+    public function logout(){
+        setcookie("user_id", "", time() - 3600);
+
+        $this->render('login');
+    }
 }
