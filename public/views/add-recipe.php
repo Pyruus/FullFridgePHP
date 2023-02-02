@@ -52,7 +52,14 @@
                 </form>
             </main>
             <nav>
-                
+                <form action="findRecipes" method="POST" class="shopping-list">
+                    <select multiple name="choices[]" id="choices">
+                        <?php foreach ($products as $product): ?>
+                            <option value="<?= $product->getId() ?>"> <?= $product->getName() ?> </option>
+                        <?php endforeach; ?>
+                    </select>
+                    <input type="submit" value="Submit">
+                </form>
             </nav>
         </section>
     </div>

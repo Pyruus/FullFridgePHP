@@ -3,6 +3,7 @@
 require_once 'AppController.php';
 require_once __DIR__.'/../models/Recipe.php';
 require_once __DIR__.'/../repository/RecipeRepository.php';
+require_once __DIR__.'/../repository/ProductRepository.php';
 class RecipeController extends AppController
 {
     const MAX_FILE_SIZE = 1024*1024;
@@ -11,11 +12,13 @@ class RecipeController extends AppController
 
     private $messages = [];
     protected $recipeRepostiory;
+    protected $productRepostiory;
 
     public function __construct()
     {
         parent::__construct();
         $this->recipeRepostiory = new RecipeRepository();
+        $this->productRepostiory = new ProductRepository();
     }
 
     public function home(){
@@ -26,6 +29,12 @@ class RecipeController extends AppController
 
     public function recipe(){
         $this->render('recipe');
+    }
+
+    public function add_recipe(){
+        $products = $this->productRepostiory->getProducts();
+
+        $this->render('add-recipe', ['products' => $products]);
     }
 
     public function addRecipe(){
@@ -43,6 +52,7 @@ class RecipeController extends AppController
 
         $this->render('add-recipe', ['messages' => $this->messages]);
     }
+
 
     public function search(){
         $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';

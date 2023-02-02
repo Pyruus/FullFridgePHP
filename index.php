@@ -7,8 +7,8 @@ $path = parse_url($path, PHP_URL_PATH);
 
 Routing::get('', 'DefaultController');
 Routing::get('home', 'RecipeController');
-Routing::get('register', 'DefaultController');
-Routing::get('add_recipe', 'DefaultController');
+Routing::get('register', 'SecurityController');
+Routing::get('add_recipe', 'RecipeController');
 Routing::get('find_recipe', 'ProductController');
 Routing::get('recipe', 'RecipeController');
 

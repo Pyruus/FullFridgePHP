@@ -39,6 +39,7 @@ class SecurityController extends AppController
         header("Location: {$url}/home");
     }
 
+
     public function register()
     {
         if (!$this->isPost()) {
