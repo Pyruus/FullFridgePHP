@@ -94,13 +94,14 @@ class RecipeRepository extends Repository
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getRecipeByProduct(int $product){
-        $stmt = $this->database->connect()->prepare('
-            SELECT * FROM recipes JOIN products_recipes ON recipes.id=products_recipes.id_recipe
-            WHERE  products_recipes.id_product=:product
-        ');
+    public function getRecipeByProduct(array $products){
+        $productsImploded = implode(',', $products);
+        $query = "
+            SELECT recipes.id, recipes.title, recipes.image, recipes.likes, recipes.dislikes FROM recipes JOIN products_recipes ON recipes.id=products_recipes.id_recipe
+            WHERE  products_recipes.id_product IN ( {$productsImploded} ) GROUP BY recipes.id
+        ";
 
-        $stmt->bindParam(':product', $product, PDO::PARAM_INT);
+        $stmt = $this->database->connect()->prepare($query);
         $stmt->execute();
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

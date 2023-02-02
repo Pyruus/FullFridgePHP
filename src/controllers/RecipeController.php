@@ -88,6 +88,8 @@ class RecipeController extends AppController
 
     public function productsRecipe(){
         //TODO
-        echo json_encode($this->recipeRepostiory->getRecipeByProduct(1));
+        header("Content-type: application/json");
+        http_response_code(200);
+        echo json_encode($this->recipeRepostiory->getRecipeByProduct([1,2]));
     }
 }
