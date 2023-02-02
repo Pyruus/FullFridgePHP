@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/recipes.css">
     <script src="https://kit.fontawesome.com/f8f883ef8f.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./public/js/search.js" defer></script>
     <script type="text/javascript" src="./public/js/logout.js" defer></script>
@@ -37,10 +38,10 @@
         <section class="recipes">
             <main class="recipes-list">
                 <?php foreach ($recipes as $recipe): ?>
-                <div>
+                <div id="project">
                     <img src="public/uploads/<?= $recipe->getImage() ?>">
                     <h2><?= $recipe->getTitle() ?></h2>
-                    <p class="description"><?= $recipe->getDescription() ?></p>
+<!--                    <p class="description">--><?php //= $recipe->getDescription() ?><!--</p>-->
                     <p class="ratio"><?= $recipe->getRatio() ?></p>
 
                 </div>
@@ -50,24 +51,16 @@
                 <div class="search-bar">
                     <input placeholder="Search recipe" id ="search-bar">
                 </div>
-                <div class="categories">
-                    <h2>Categories</h2>
-                    <ul>
-                        <li>Category 1</li>
-                        <li>Category 2</li>
-                        <li>Category 3</li>
-                    </ul>
-                </div>
             </nav>
         </section>
     </div>
 </body>
 
 <template id="recipes-template">
-    <div>
+    <div id="project">
         <img src="">
         <h2></h2>
-        <p class="description"></p>
+<!--        <p class="description"></p>-->
         <p class="ratio"></p>
     </div>
 </template>

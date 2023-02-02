@@ -39,8 +39,8 @@ function createRecipe(recipe) {
     image.src = `/public/uploads/${recipe.image}`;
     const title = clone.querySelector("h2");
     title.innerHTML = recipe.title;
-    const description = clone.querySelector(".description");
-    description.innerHTML = recipe.description;
+    // const description = clone.querySelector(".description");
+    // description.innerHTML = recipe.description;
     const ratio = clone.querySelector(".ratio");
     ratio.innerHTML = recipe.ratio;
 

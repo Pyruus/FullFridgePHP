@@ -126,6 +126,7 @@ input, textarea{
     display: flex;
     flex-direction: row;
     height: 90%;
+    padding-left: 1em;
 }
 
 nav{
@@ -136,6 +137,7 @@ nav{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
 }
 
 ul{
