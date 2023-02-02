@@ -104,6 +104,18 @@ class RecipeRepository extends Repository
         $stmt = $this->database->connect()->prepare($query);
         $stmt->execute();
 
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $recipes = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($recipes as $recipe){
+            $result[] = new Recipe(
+                $recipe['title'],
+                $recipe['description'],
+                $recipe['image'],
+                $recipe['likes'] - $recipe['dislikes'],
+                $recipe['id']
+            );
+        }
+
+        return $result;
     }
 }

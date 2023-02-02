@@ -19,6 +19,7 @@ Routing::post('search', 'RecipeController');
 Routing::post('getRecipe', 'RecipeController');
 Routing::post('productsRecipe', 'RecipeController');
 Routing::post('logout', 'SecurityController');
+Routing::post('findRecipes', 'RecipeController');
 
 
 Routing::run($path);

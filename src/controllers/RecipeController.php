@@ -92,4 +92,27 @@ class RecipeController extends AppController
         http_response_code(200);
         echo json_encode($this->recipeRepostiory->getRecipeByProduct([1,2]));
     }
+
+    public function findRecipes(){
+        if(!$this->isPost()){
+            return $this->render('find-product');
+        }
+        $recipes = $this->recipeRepostiory->getRecipeByProduct($_POST['choices']);
+
+//        if(!$user){
+//            return $this->render('login', ['messages' => ['User not exist']]);
+//        }
+//
+//        if ($user->getEmail() != $email){
+//            return $this->render('login', ['messages' => ['User with this email not found']]);
+//        }
+//
+//        if (!password_verify($password, $user->getPassword())) {
+//            return $this->render('login', ['messages' => ['Wrong password']]);
+//        }
+        return $this->render('home', ['recipes' => $recipes]);
+//
+//        $url = "http://$_SERVER[HTTP_HOST]";
+//        header("Location: {$url}/home");
+    }
 }

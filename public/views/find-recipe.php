@@ -36,7 +36,7 @@
         <section class="recipes">
             <main>
                 <h1>What's in your fridge?</h1>
-                <form>
+                <form action="findRecipes" method="POST">
                     <select multiple name="choices[]" id="choices">
                         <?php foreach ($products as $product): ?>
                             <option value="<?= $product->getId() ?>"> <?= $product->getName() ?> </option>
