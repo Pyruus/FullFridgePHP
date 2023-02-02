@@ -12,7 +12,12 @@ fetch("/getRecipe", {
 }).then((response) => {
     return response.json();
 }).then((recipe) => {
-    loadRecipe(recipe);
+    if(recipe.length == 0){
+        loadEmptyRecipe();
+    }
+    else {
+        loadRecipe(recipe);
+    }
 });
 
 function loadRecipe(recipe) {
@@ -25,4 +30,11 @@ function loadRecipe(recipe) {
     title.innerHTML = currentRecipe.title;
     const description = recipeContainer.querySelector(".description");
     description.innerHTML = currentRecipe.description;
+}
+
+function loadEmptyRecipe() {
+    const recipeContainer = document.querySelector('main');
+
+    const title = recipeContainer.querySelector("h1");
+    title.innerHTML = "Recipe with given id does not exist";
 }
