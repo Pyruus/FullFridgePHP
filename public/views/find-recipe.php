@@ -2,6 +2,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <script src="https://kit.fontawesome.com/f8f883ef8f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./public/js/logout.js" defer></script>
     <title>Full Fridgee</title>
 </head>
 <body>
@@ -27,7 +28,7 @@
                     <a href="#" class="button-icons"><i class="fa-solid fa-gear"></i></a>
                 </div>
                 <div class="logout-button">
-                    <a href="#" class="button-icons"><i class="fa-solid fa-right-from-bracket"></i></a>
+                    <a href="login" class="button-icons"><i class="fa-solid fa-right-from-bracket"></i></a>
                 </div>
             </div>
         </header>
