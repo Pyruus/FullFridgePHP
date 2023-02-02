@@ -85,4 +85,9 @@ class RecipeController extends AppController
             echo json_encode($this->recipeRepostiory->getRecipeById($decoded['recipeId']));
         }
     }
+
+    public function productsRecipe(){
+        //TODO
+        echo json_encode($this->recipeRepostiory->getRecipeByProduct(1));
+    }
 }
