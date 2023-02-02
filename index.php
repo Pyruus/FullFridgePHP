@@ -9,7 +9,7 @@ Routing::get('', 'DefaultController');
 Routing::get('home', 'RecipeController');
 Routing::get('register', 'DefaultController');
 Routing::get('add_recipe', 'DefaultController');
-Routing::get('find_recipe', 'DefaultController');
+Routing::get('find_recipe', 'ProductController');
 Routing::get('recipe', 'RecipeController');
 
 Routing::post('login', 'SecurityController');

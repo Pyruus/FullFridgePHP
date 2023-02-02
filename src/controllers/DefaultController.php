@@ -20,11 +20,4 @@ class DefaultController extends AppController{
         $this->render('register');
     }
 
-    public function find_recipe(){
-        //TODO
-
-        $this->render('find-recipe');
-    }
-
-
 }
