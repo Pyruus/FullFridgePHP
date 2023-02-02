@@ -138,6 +138,7 @@ nav{
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+
 }
 
 ul{
@@ -210,4 +211,36 @@ header{
     border-radius: 1em;
     box-shadow: 0 0 0.2em red;
     outline: none;
+}
+
+#choices{
+    background: linear-gradient(180deg, #D3F83F 0%, rgba(149, 174, 49, 0.64) 100%);
+    border-radius: 30px;
+    width: 400%;
+    height: 75vh;
+    overflow: hidden;
+    text-align: center;
+}
+
+#choices > option{
+    border-bottom: 1px solid grey;
+    width: 100%;
+}
+
+.shopping-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.find_recipe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.find_recipe > h1{
+    font-size: 500%;
+    color: white;
+
 }

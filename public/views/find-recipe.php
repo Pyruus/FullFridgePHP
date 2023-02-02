@@ -34,9 +34,11 @@
             </div>
         </header>
         <section class="recipes">
-            <main>
-                <h1>What's in your fridge?</h1>
-                <form action="findRecipes" method="POST">
+            <main class="find_recipe">
+                <h1 class>What's in your fridge?</h1>
+            </main>
+            <nav>
+                <form action="findRecipes" method="POST" class="shopping-list">
                     <select multiple name="choices[]" id="choices">
                         <?php foreach ($products as $product): ?>
                             <option value="<?= $product->getId() ?>"> <?= $product->getName() ?> </option>
@@ -44,9 +46,6 @@
                     </select>
                     <input type="submit" value="Submit">
                 </form>
-            </main>
-            <nav>
-
             </nav>
         </section>
     </div>
