@@ -80,4 +80,15 @@ class RecipeRepository extends Repository
 
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    public function getRecipeById(int $id){
+        $stmt = $this->database->connect()->prepare('
+            SELECT * FROM recipes WHERE id = :id
+        ');
+
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

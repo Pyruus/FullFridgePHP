@@ -2,6 +2,8 @@
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <script src="https://kit.fontawesome.com/f8f883ef8f.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./public/js/recipe.js" defer></script>
+    <script type="text/javascript" src="./public/js/logout.js" defer></script>
     <title>Full Fridgee</title>
 </head>
 <body>
@@ -31,9 +33,11 @@
                 </div>
             </div>
         </header>
-        <section class="recipe">
+        <section class="recipes">
             <main>
-
+                <img>
+                <h1></h1>
+                <p class="description"></p>
             </main>
             <nav>
 
@@ -41,3 +45,9 @@
         </section>
     </div>
 </body>
+
+<template id="recipe-template">
+    <img>
+    <h1></h1>
+    <p class="description"></p>
+</template>
