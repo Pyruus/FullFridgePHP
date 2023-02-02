@@ -23,7 +23,8 @@ class RecipeRepository extends Repository
         return new Recipe(
             $recipe['title'],
             $recipe['description'],
-            $recipe['image']
+            $recipe['image'],
+            $recipe['likes'] - $recipe['dislikes']
         );
     }
 
@@ -58,7 +59,8 @@ class RecipeRepository extends Repository
             $result[] = new Recipe(
                 $recipe['title'],
                 $recipe['description'],
-                $recipe['image']
+                $recipe['image'],
+                $recipe['likes'] - $recipe['dislikes']
             );
         }
 

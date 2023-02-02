@@ -31,7 +31,7 @@ class RecipeController extends AppController
                 dirname(__DIR__).self::UPLOAD_DIRECTORY.$_FILES['file']['name']
             );
 
-            $recipe = new Recipe($_POST['name'], $_POST['description'], $_FILES['file']['name']);
+            $recipe = new Recipe($_POST['name'], $_POST['description'], $_FILES['file']['name'], 0);
 
             $this->recipeRepostiory->addRecipe($recipe);
             return $this->render('home', ['messages' => $this->messages, 'recipes' => $this->recipeRepostiory->getRecipes()]);

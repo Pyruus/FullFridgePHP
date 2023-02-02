@@ -40,7 +40,9 @@
                 <div>
                     <img src="public/uploads/<?= $recipe->getImage() ?>">
                     <h2><?= $recipe->getTitle() ?></h2>
-                    <p><?= $recipe->getDescription() ?></p>
+                    <p class="description"><?= $recipe->getDescription() ?></p>
+                    <p class="ratio"><?= $recipe->getRatio() ?></p>
+
                 </div>
                 <?php endforeach; ?>
             </main>
@@ -65,6 +67,7 @@
     <div>
         <img src="">
         <h2></h2>
-        <p></p>
+        <p class="description"></p>
+        <p class="ratio"></p>
     </div>
 </template>
