@@ -2,17 +2,19 @@
 
 class Recipe
 {
+    private $id;
     private $title;
     private $description;
     private $image;
     private $ratio;
 
-    public function __construct($title, $description, $image, $ratio)
+    public function __construct($title, $description, $image, $ratio, $id)
     {
         $this->title = $title;
         $this->description = $description;
         $this->image = $image;
         $this->ratio = $ratio;
+        $this->id = $id;
     }
 
     public function getTitle(): string
@@ -22,6 +24,11 @@ class Recipe
     public function getRatio()
     {
         return $this->ratio;
+    }
+
+    public function getId()
+    {
+        return $this->id;
     }
 
     public function setRatio($ratio): void

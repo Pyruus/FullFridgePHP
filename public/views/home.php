@@ -5,6 +5,7 @@
     <script src="https://kit.fontawesome.com/f8f883ef8f.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./public/js/search.js" defer></script>
     <script type="text/javascript" src="./public/js/logout.js" defer></script>
+    <script type="text/javascript" src="./public/js/recipeRedirect.js" defer></script>
 
     <title>Full Fridgee</title>
 </head>
@@ -39,9 +40,8 @@
             <main class="recipes-list">
                 <?php foreach ($recipes as $recipe): ?>
                 <div id="project">
-                    <img src="public/uploads/<?= $recipe->getImage() ?>">
+                    <img src="public/uploads/<?= $recipe->getImage() ?>" id="<?= $recipe->getId() ?>">
                     <h2><?= $recipe->getTitle() ?></h2>
-<!--                    <p class="description">--><?php //= $recipe->getDescription() ?><!--</p>-->
                     <p class="ratio"><?= $recipe->getRatio() ?></p>
 
                 </div>
@@ -60,7 +60,6 @@
     <div id="project">
         <img src="">
         <h2></h2>
-<!--        <p class="description"></p>-->
         <p class="ratio"></p>
     </div>
 </template>
