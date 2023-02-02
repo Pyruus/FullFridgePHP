@@ -6,6 +6,7 @@
     <script type="text/javascript" src="./public/js/search.js" defer></script>
     <script type="text/javascript" src="./public/js/logout.js" defer></script>
     <script type="text/javascript" src="./public/js/recipeRedirect.js" defer></script>
+    <script type="text/javascript" src="./public/js/userExistance.js" defer></script>
 
     <title>Full Fridgee</title>
 </head>

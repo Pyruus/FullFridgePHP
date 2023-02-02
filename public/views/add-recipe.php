@@ -4,6 +4,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/recipes.css">
     <script src="https://kit.fontawesome.com/f8f883ef8f.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./public/js/logout.js" defer></script>
+    <script type="text/javascript" src="./public/js/userExistance.js" defer></script>
     <title>Full Fridgee</title>
 </head>
 <body>
