@@ -138,4 +138,20 @@ class RecipeRepository extends Repository
             ]);
         }
     }
+
+    public function like(int $id){
+        $stmt = $this->database->connect()->prepare('
+            UPDATE recipes SET likes = likes + 1 WHERE id = :id
+        ');
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+    }
+
+    public function dislike(int $id){
+        $stmt = $this->database->connect()->prepare('
+            UPDATE recipes SET dislikes = dislikes + 1 WHERE id = :id
+        ');
+        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+        $stmt->execute();
+    }
 }

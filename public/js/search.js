@@ -40,8 +40,6 @@ function createRecipe(recipe) {
     image.id = recipe.id;
     const title = clone.querySelector("h2");
     title.innerHTML = recipe.title;
-    const ratio = clone.querySelector(".ratio");
-    ratio.innerHTML = recipe.ratio;
 
     recipeContainer.appendChild(clone);
 }

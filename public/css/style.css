@@ -244,3 +244,15 @@ header{
     color: white;
 
 }
+
+.low_ratio{
+    color: red;
+}
+
+.mid_ratio{
+    color: lightgrey;
+}
+
+.high_ratio{
+    color: green;
+}

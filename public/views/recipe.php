@@ -5,6 +5,7 @@
     <script type="text/javascript" src="./public/js/recipe.js" defer></script>
     <script type="text/javascript" src="./public/js/logout.js" defer></script>
     <script type="text/javascript" src="./public/js/userExistance.js" defer></script>
+    <script type="text/javascript" src="./public/js/statistics.js" defer></script>
     <title>Full Fridgee</title>
 </head>
 <body>
@@ -36,6 +37,11 @@
         </header>
         <section class="recipes">
             <main>
+                <div class="social-section">
+                    <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-minus"></i>
+                    <p class="ratio"></p>
+                </div>
                 <img>
                 <h1></h1>
                 <p class="description"></p>

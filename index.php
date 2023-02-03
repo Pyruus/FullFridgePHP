@@ -11,6 +11,9 @@ Routing::get('register', 'SecurityController');
 Routing::get('add_recipe', 'RecipeController');
 Routing::get('find_recipe', 'ProductController');
 Routing::get('recipe', 'RecipeController');
+Routing::get('like', 'RecipeController');
+Routing::get('dislike', 'RecipeController');
+
 
 Routing::post('login', 'SecurityController');
 Routing::post('addRecipe', 'RecipeController');

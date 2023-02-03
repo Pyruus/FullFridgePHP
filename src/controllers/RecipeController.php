@@ -110,4 +110,14 @@ class RecipeController extends AppController
 
         return $this->render('home', ['recipes' => $recipes]);
     }
+
+    public function like(int $id){
+        $this->recipeRepostiory->like($id);
+        http_response_code(200);
+    }
+
+    public function dislike(int $id){
+        $this->recipeRepostiory->dislike($id);
+        http_response_code(200);
+    }
 }
