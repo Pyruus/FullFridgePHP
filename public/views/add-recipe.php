@@ -37,7 +37,7 @@
         <section class="recipes">
             <main class="recipe-form">
                 <h1>Dodaj przepis</h1>
-                <form action="addRecipe" method="post" ENCTYPE="multipart/form-data">
+                <form action="addRecipe" method="post" ENCTYPE="multipart/form-data" id="addRecipe">
                     <?php if(isset($messages)){
                         foreach ($messages as $message){
                             echo $message;
@@ -49,16 +49,15 @@
 
                     <input type="file" name="file">
                     <button type="submit">Add</button>
-                </form>
+<!--                </form>-->
             </main>
             <nav>
-                <form action="findRecipes" method="POST" class="shopping-list">
+<!--                <form action="addRecipeProducts" method="POST" class="shopping-list" id="addRecipeProducts">-->
                     <select multiple name="choices[]" id="choices">
                         <?php foreach ($products as $product): ?>
                             <option value="<?= $product->getId() ?>"> <?= $product->getName() ?> </option>
                         <?php endforeach; ?>
                     </select>
-                    <input type="submit" value="Submit">
                 </form>
             </nav>
         </section>

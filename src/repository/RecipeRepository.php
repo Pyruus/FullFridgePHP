@@ -118,4 +118,24 @@ class RecipeRepository extends Repository
 
         return $result;
     }
+
+    public function addRecipeProducts(array $products){
+        $stmt = $this->database->connect()->prepare('
+            SELECT max(id) as id FROM recipes
+            ');
+        $stmt->execute();
+        $recipe_id = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($products as $product){
+            $stmt = $this->database->connect()->prepare('
+            INSERT INTO products_recipes (id_recipe, id_product)
+            VALUES (?, ?)
+            ');
+
+            $stmt->execute([
+                $recipe_id[0]['id'],
+                $product
+            ]);
+        }
+    }
 }

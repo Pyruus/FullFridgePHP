@@ -47,12 +47,12 @@ class RecipeController extends AppController
             $recipe = new Recipe($_POST['name'], $_POST['description'], $_FILES['file']['name'], 0, 0);
 
             $this->recipeRepostiory->addRecipe($recipe);
-            return $this->render('home', ['messages' => $this->messages, 'recipes' => $this->recipeRepostiory->getRecipes()]);
+            $this->recipeRepostiory->addRecipeProducts($_POST['choices']);
+            return $this->render('home', ['m essages' => $this->messages, 'recipes' => $this->recipeRepostiory->getRecipes()]);
         }
 
         $this->render('add-recipe', ['messages' => $this->messages]);
     }
-
 
     public function search(){
         $contentType = isset($_SERVER["CONTENT_TYPE"]) ? trim($_SERVER["CONTENT_TYPE"]) : '';
@@ -97,7 +97,6 @@ class RecipeController extends AppController
     }
 
     public function productsRecipe(){
-        //TODO
         header("Content-type: application/json");
         http_response_code(200);
         echo json_encode($this->recipeRepostiory->getRecipeByProduct([1,2]));
@@ -109,20 +108,6 @@ class RecipeController extends AppController
         }
         $recipes = $this->recipeRepostiory->getRecipeByProduct($_POST['choices']);
 
-//        if(!$user){
-//            return $this->render('login', ['messages' => ['User not exist']]);
-//        }
-//
-//        if ($user->getEmail() != $email){
-//            return $this->render('login', ['messages' => ['User with this email not found']]);
-//        }
-//
-//        if (!password_verify($password, $user->getPassword())) {
-//            return $this->render('login', ['messages' => ['Wrong password']]);
-//        }
         return $this->render('home', ['recipes' => $recipes]);
-//
-//        $url = "http://$_SERVER[HTTP_HOST]";
-//        header("Location: {$url}/home");
     }
 }
