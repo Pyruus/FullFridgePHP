@@ -23,9 +23,10 @@
                 <div class="form-header">Sign up</div>
                 <div class="lr-swap">Already have an account? <a href="login" class="lr-swap">Sign in</a></div>
                 <input name="email" type="text" placeholder="email@email.com">
-                <input name="confirm-email" type="text" placeholder="Confirm email">
                 <input name="password" type="password" placeholder="Password">
                 <input name="confirm-password" type="password" placeholder="Confirm password">
+                <input name="name" type="text" placeholder="Name">
+                <input name="surname" type="text" placeholder="Surname">
                 <button type="submit">Sign up</button>
             </form>
         </div>
