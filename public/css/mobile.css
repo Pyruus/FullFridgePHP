@@ -1,0 +1,9 @@
+@media only screen and (max-device-width: 420px){
+    header{
+        padding: 0;
+    }
+
+    .recipes{
+        padding: 0;
+    }
+}

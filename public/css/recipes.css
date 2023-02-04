@@ -39,3 +39,25 @@ main::-webkit-scrollbar{
     align-items: center;
     background: linear-gradient(90deg, #B0A8B9 0%, #59545F 100%);;
 }
+
+@media only screen and (max-device-width: 420px){
+
+    main {
+        display: grid;
+        grid-template-columns: repeat(1, 0.8fr);
+        grid-gap: 2em;
+        padding: 0;
+        overflow: auto;
+        width: 100vw;
+        justify-content: center;
+    }
+    nav{
+        width: 100vw;
+        height: 10vh;
+        background: #1E1E1E;
+    }
+    .recipes{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}

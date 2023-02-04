@@ -107,9 +107,13 @@ input, textarea{
         margin: auto;
     }
 
-    img{
+    .logo > img{
         height: 5em;
         margin: 2em;
+    }
+
+    .nav-buttons > div > .button{
+        font-size: 1em;
     }
 }
 
