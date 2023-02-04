@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/recipe.css">
     <script src="https://kit.fontawesome.com/f8f883ef8f.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./public/js/recipe.js" defer></script>
     <script type="text/javascript" src="./public/js/logout.js" defer></script>
@@ -32,11 +33,11 @@
             <main>
                 <div class="social-section">
                     <i class="fa-solid fa-plus"></i>
-                    <i class="fa-solid fa-minus"></i>
                     <p class="ratio"></p>
+                    <i class="fa-solid fa-minus"></i>
                 </div>
-                <img>
                 <h1></h1>
+                <img>
                 <p class="description"></p>
             </main>
             <nav>
