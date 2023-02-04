@@ -12,7 +12,6 @@
     <div class="base-container">
         <header>
             <div class = 'nav-buttons'>
-                <img src="public/img/logo-no-text.svg">
                 <div class="home-button">
                     <a href="home" class="button">Home</a>
                 </div>
@@ -24,12 +23,6 @@
                 </div>
             </div>
             <div class="user-buttons">      
-                <div class="user-button">
-                    <a href="#" class="button-icons"><i class="fa-regular fa-user"></i></a>
-                </div>
-                <div class="settings-button">
-                    <a href="#" class="button-icons"><i class="fa-solid fa-gear"></i></a>
-                </div>
                 <div class="logout-button">
                     <a href="login" class="button-icons"><i class="fa-solid fa-right-from-bracket"></i></a>
                 </div>

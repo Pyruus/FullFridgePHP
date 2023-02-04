@@ -18,6 +18,10 @@ main {
     overflow: auto;
 }
 
+main::-webkit-scrollbar{
+    display: none;
+  }
+
 .recipes-list>div>img {
     height: 50%;
     width: 100%;
@@ -25,20 +29,13 @@ main {
     border-radius: 1em 1em 0 0;
 }
 
-.recipes-list>div>div {
-    height: 50%;
-    margin: 1em;
-    color: #2699FB;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
 .recipes-list>div {
     border: 1px solid gray;
     border-radius: 1em 1em 0 0;
-    height: 400px;
+    height: 300px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #B0A8B9 0%, #59545F 100%);;
 }

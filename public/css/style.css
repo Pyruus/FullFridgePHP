@@ -119,8 +119,13 @@ input, textarea{
     align-items: center;
     justify-content: flex-start;
     height: 100vh;
-
+    overflow: scroll;   
 }
+
+.base-container::-webkit-scrollbar{
+    display: none;
+  }
+
 
 .recipes{
     display: flex;
@@ -130,8 +135,8 @@ input, textarea{
 }
 
 nav{
-    width: 25vw;
-    height: 100%;
+    width: 24.2vw;
+    height: 100vh;
     background: linear-gradient(180deg, #B0A8B9 0%, #59545F 100%);
 
     display: flex;
@@ -148,6 +153,8 @@ ul{
 main{
     width: 75vw;
     background: #1E1E1E;
+    height: 93.2vh;
+    overflow: hidden;
 }
 
 a{
@@ -185,7 +192,7 @@ div i{
 
 header{
     display: flex;
-    width: 100%;
+    width: 100vw;
     height: 10%;
     padding: 1em 2em;
     justify-content: space-between;
