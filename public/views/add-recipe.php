@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <head>
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
-    <link rel="stylesheet" type="text/css" href="public/css/recipes.css">
+    <link rel="stylesheet" type="text/css" href="public/css/recipe.css">
+    <link rel="stylesheet" type="text/css" href="public/css/add.css">
     <script src="https://kit.fontawesome.com/f8f883ef8f.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./public/js/logout.js" defer></script>
     <script type="text/javascript" src="./public/js/userExistance.js" defer></script>
@@ -29,7 +30,7 @@
         </header>
         <section class="recipes">
             <main class="recipe-form">
-                <h1>Dodaj przepis</h1>
+                <h1>Add a recipe</h1>
                 <form action="addRecipe" method="post" ENCTYPE="multipart/form-data" id="addRecipe">
                     <?php if(isset($messages)){
                         foreach ($messages as $message){
@@ -40,17 +41,20 @@
                     <input name="name" type="text" placeholder="Name">
                     <textarea name="description" rows="8" placeholder="Put a recipe here"></textarea>
 
-                    <input type="file" name="file">
+                    <input type="file" name="file" class="sendRecipe">
                     <button type="submit">Add</button>
 <!--                </form>-->
             </main>
             <nav>
 <!--                <form action="addRecipeProducts" method="POST" class="shopping-list" id="addRecipeProducts">-->
+                <div class="added-list">
                     <select multiple name="choices[]" id="choices">
                         <?php foreach ($products as $product): ?>
                             <option value="<?= $product->getId() ?>"> <?= $product->getName() ?> </option>
                         <?php endforeach; ?>
                     </select>
+                </div>
+                    
                 </form>
             </nav>
         </section>
