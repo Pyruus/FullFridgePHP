@@ -6,4 +6,8 @@
     .recipes{
         padding: 0;
     }
+
+    .nav-buttons > div{
+        font-size: 50px;
+    }
 }

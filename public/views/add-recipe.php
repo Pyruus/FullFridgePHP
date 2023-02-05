@@ -3,6 +3,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link rel="stylesheet" type="text/css" href="public/css/recipe.css">
     <link rel="stylesheet" type="text/css" href="public/css/add.css">
+    <link rel="stylesheet" type="text/css" href="public/css/mobile.css">
     <script src="https://kit.fontawesome.com/f8f883ef8f.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="./public/js/logout.js" defer></script>
     <script type="text/javascript" src="./public/js/userExistance.js" defer></script>
@@ -43,10 +44,8 @@
 
                     <input type="file" name="file" class="sendRecipe">
                     <button type="submit">Add</button>
-<!--                </form>-->
             </main>
             <nav>
-<!--                <form action="addRecipeProducts" method="POST" class="shopping-list" id="addRecipeProducts">-->
                 <div class="added-list">
                     <select multiple name="choices[]" id="choices">
                         <?php foreach ($products as $product): ?>
