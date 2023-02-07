@@ -25,7 +25,6 @@ search.addEventListener("keyup", (event) => {
 function loadRecipes(recipes){
 
     recipes.forEach(recipe => {
-        console.log(recipe);
         createRecipe(recipe);
     });
 }
